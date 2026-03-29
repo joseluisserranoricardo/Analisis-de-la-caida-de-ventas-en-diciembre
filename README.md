@@ -1,73 +1,158 @@
 # 📊 Análisis de la caída de ventas en diciembre
 
 ## 📌 Descripción del proyecto
-Este proyecto tiene como objetivo analizar la caída de ventas en el mes de diciembre, identificando si se trata de un comportamiento recurrente o un evento aislado, y explorando las posibles causas detrás de esta variación.
+Este proyecto analiza la caída de ventas en el mes de diciembre, con el objetivo de determinar si se trata de un patrón recurrente o un evento aislado, e identificar los principales factores que explican esta disminución.
+
+---
 
 ## 🎯 Objetivos
-- Determinar si la caída de ventas en diciembre ocurre todos los años  
-- Analizar en profundidad el comportamiento del último año disponible
-- Identificar las categorías, segmentos y regiones responsables de la disminución  
-- Comunicar hallazgos mediante visualizaciones claras e intuitivas  
+- Evaluar si la caída de ventas en diciembre ocurre de forma consistente a lo largo de los años  
+- Analizar el comportamiento del año 2014  
+- Identificar las categorías, subcategorías, segmentos y regiones responsables de la caída  
+- Generar insights accionables para la toma de decisiones  
 
-## 🧠 Flujo de trabajo
+---
 
-### 1. Exploración inicial con SQL (Oracle)
-Se realizó una consulta sobre los datos históricos para analizar el comportamiento de ventas en noviembre y diciembre a lo largo de varios años.
+## 🧠 Enfoque analítico
 
-![anios anteriores sql](https://github.com/user-attachments/assets/a081adb1-f214-464a-98a7-c065ec17a8ba)
+El análisis se desarrolló siguiendo un enfoque estructurado:
 
-Hallazgo clave:  
-La caída de ventas en diciembre no es consistente todos los años, lo que indica que no es un patrón estacional fuerte.
+1. Validación del problema a nivel histórico  
+2. Identificación de que la caída no es un patrón recurrente  
+3. Enfoque en el último año disponible (2014)  
+4. Exploración, limpieza y visualización de los datos  
+5. Generación de insights y recomendaciones  
 
-### 2. Enfoque en el año 2014
-Dado que el fenómeno no era recurrente, se decidió centrar el análisis en el año más reciente disponible (2014), donde sí se observa una caída significativa.
+---
 
-### 3. Limpieza de datos con Power Query
-Se aplicaron transformaciones para:
-- Filtrar únicamente los datos del año 2014  
-- Preparar el dataset para análisis posterior  
-- Asegurar consistencia en los datos  
+## 🔄 Flujo de trabajo
 
-### 4. Análisis exploratorio en Excel
+### 1. Exploración inicial (SQL)
+Se analizaron múltiples años para comparar el comportamiento de ventas entre noviembre y diciembre.
+
+![anios anteriores sql](https://github.com/user-attachments/assets/ecc56987-d863-4689-b022-bb689ee1b1be)
+
+**Hallazgo clave:**  
+La caída de diciembre no ocurre todos los años, por lo que no es un patrón estacional fuerte.
+
+---
+
+### 2. Limpieza de datos (Power Query)
+- Filtrado del año 2014  
+- Preparación del dataset  
+- Estandarización de los datos para análisis  
+
+---
+
+### 3. Análisis exploratorio en Excel
 Se utilizó Excel para:
-- Crear una tabla dinámica con las ventas por mes  
-- Generar un gráfico de tendencia que muestra claramente la caída de noviembre a diciembre  
-- Validar visualmente el comportamiento de los datos
+- Crear tablas dinámicas  
+- Visualizar la tendencia mensual  
+- Detectar claramente la caída de noviembre a diciembre  
 
-![EDA](https://github.com/user-attachments/assets/3bde15cf-b3d5-418c-9258-151d1f880c7f)
+![EDA](https://github.com/user-attachments/assets/06d04626-e2b9-4fe2-9b3e-1330f260807e)
 
-### 5. Visualización en Power BI
-Con los datos ya preparados, se construyó un dashboard que incluye:
-- KPI de ventas de noviembre vs diciembre  
-- Variación porcentual  
-- Tendencia de ventas mensual  
+---
+
+
+### 4. Visualización (Power BI)
+Se construyó un dashboard interactivo con:
+
+- KPIs principales (noviembre vs diciembre)  
+- Tendencia de ventas  
 - Descomposición por categoría  
 - Descomposición por segmento  
-- Análisis de diferencias por región
+- Top regiones con mayor caída  
+- Top subcategorías con mayor impacto  
 
-![dashboard](https://github.com/user-attachments/assets/a499c8d7-88b1-40bf-915b-0c8727e724e2)
+---
 
-Este dashboard es interactivo para permitir análisis más profundos.
-![filtro asia central](https://github.com/user-attachments/assets/8fc91696-8f28-4768-8ee5-bf78125e760a)
+## 📉 Insight principal
 
-## 📉 Principales hallazgos
-- Las ventas disminuyen un 9.39% en diciembre respecto a noviembre  
-- La caída no es un patrón histórico constante  
-- La disminución está impulsada principalmente por:
-  - La categoría de Tecnología  
-  - Regiones como Asia Central, Este y Oceanía  
+Aunque diciembre suele ser un mes fuerte en ventas, en 2014 se observa una caída del **9.39%** respecto a noviembre.
+
+Este comportamiento sugiere un posible **desplazamiento de la demanda hacia meses anteriores**, en lugar de un crecimiento sostenido hacia fin de año.
+
+---
+
+## 🔍 Hallazgos clave
+
+- La caída de ventas no es un patrón histórico constante  
+- La disminución está **concentrada**, no distribuida de forma uniforme  
+- La categoría **Tecnología** es la principal responsable del descenso  
+- Las subcategorías más afectadas son:
+  - Storage  
+  - Machines  
+  - Copiers  
+- Las regiones con mayor impacto negativo son:
+  - Asia Central  
+  - East  
+  - Oceanía  
+
+---
+
+## 🧠 Interpretación del análisis
+
+La caída está altamente concentrada en **pocos drivers específicos**, lo que sugiere que no se trata de un problema general del negocio, sino de áreas particulares que requieren atención.
+
+Esto indica que una intervención focalizada podría tener un impacto significativo en la recuperación de ventas.
+
+---
+
+## 💼 Recomendaciones de negocio
+
+- Revisar la estrategia de ventas en la categoría Tecnología  
+- Analizar el comportamiento de demanda en noviembre (posible efecto de adelanto de compras)  
+- Evaluar campañas comerciales en regiones afectadas  
+- Ajustar inventarios para evitar sobrestock en diciembre  
+- Implementar promociones específicas en subcategorías críticas  
+
+---
+
+## 🔍 Posibles causas
+
+- Efecto de eventos comerciales como Black Friday que adelantan compras  
+- Disminución de demanda después de un pico en noviembre  
+- Factores regionales (mercado, logística o distribución)  
+- Cambios en comportamiento del consumidor en fin de año  
+
+---
+
+## ❓ Líneas futuras de análisis
+
+- Analizar datos de promociones y campañas de marketing  
+- Evaluar desempeño a nivel de producto específico  
+- Comparar con años posteriores para validar tendencias  
+- Incluir variables externas (estacionalidad, economía, etc.)  
+
+---
 
 ## 🛠️ Herramientas utilizadas
-- Oracle SQL → Agrupaciones para análisis exploratorio de todos los años
-- Power Query → Limpieza y transformación de datos 
-- Excel → Análisis exploratorio del año 2014 
-- Power BI → Análisis de causas del descenso, visualizaciones en dashboard final  
+
+- Oracle SQL → Exploración inicial de todo el dataset
+- Power Query → Limpieza de datos 
+- Excel → Análisis exploratorio de 2014  
+- Power BI → Visualización y storytelling  
+
+---
 
 ## 📁 Estructura del proyecto
-- Datos crudos en csv 
-- Datos procesados (filtrados a 2014) y análisis exploratorio en un archivo de excel 
-- Dashboard en Power BI  
-- Imágenes del análisis  
 
-## 🚀 Conclusión
-La caída de ventas en diciembre de 2014 no responde a un patrón histórico general, sino a un comportamiento específico de ese año. El análisis permitió identificar las áreas clave responsables de la disminución, proporcionando información útil para la toma de decisiones.
+- Datos crudos  
+- script oracle
+- datos procesados y análisis exploratorio en Excel  
+- Dashboard en Power BI  
+- Imágenes del proyecto  
+
+---
+
+## 🚀 Impacto del análisis
+
+Este análisis permite identificar áreas específicas de mejora en la estrategia comercial, facilitando la toma de decisiones en inventario, marketing y segmentación, y ayudando a anticipar caídas en el rendimiento de ventas.
+
+---
+
+## 📸 Dashboard
+
+![dashboard](https://github.com/user-attachments/assets/4f24d7ed-b148-4ede-bbcd-608133c20737)
+
