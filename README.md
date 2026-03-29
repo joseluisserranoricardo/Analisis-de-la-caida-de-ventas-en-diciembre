@@ -154,5 +154,6 @@ Este análisis permite identificar áreas específicas de mejora en la estrategi
 
 ## 📸 Dashboard
 
-![dashboard](https://github.com/user-attachments/assets/4f24d7ed-b148-4ede-bbcd-608133c20737)
+![dashboard](https://github.com/user-attachments/assets/bb787a5e-b9d4-4dca-af3d-6c26e98c1e88)
+
 
